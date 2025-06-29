@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Ukládání produktů do .txt cache
+ */
+
 class FileCache implements ICache
 {
     private string $file;
@@ -8,7 +12,6 @@ class FileCache implements ICache
     {
         $this->file = $file;
 
-        // Pokud soubor neexistuje, vytvoříme ho jako prázdné pole
         if (!file_exists($this->file)) {
             file_put_contents($this->file, json_encode([]));
         }

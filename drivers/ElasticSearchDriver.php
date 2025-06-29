@@ -6,7 +6,7 @@ class ElasticSearchDriver implements IElasticSearchDriver
 {
     public function findById(string $id): array
     {
-        // Simulované testovací data
+        //simulace vrácených dat
         return [
             'id' => $id,
             'source' => 'ElasticSearch',

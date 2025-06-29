@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Uchovávání počtu dotazů na jednotlivé produkty
+ */
+
 class FileCounter implements ICounter {
     private string $file = __DIR__ . '/../data/counter.txt';
 

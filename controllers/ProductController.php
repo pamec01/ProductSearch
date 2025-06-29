@@ -13,14 +13,14 @@ class ProductController
         $this->dataSource = $dataSource;
     }
 
-    // Vrací JSON string (API)
+    //vrací JSON string (API)
     public function detail(string $id): string
     {
         $product = $this->getProduct($id);
         return json_encode($product, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     }
 
-    // Vrací HTML stránku s JSON ve <pre> (prohlížeč)
+    //vrací HTML stránku s JSON
     public function detailHtml(string $id): string
     {
         $product = $this->getProduct($id);

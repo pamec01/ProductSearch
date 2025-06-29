@@ -6,7 +6,7 @@ class MySQLDriver implements IMySQLDriver
 {
     public function findProduct(string $id): array
     {
-        // Simulované testovací data
+        //simulace dat
         return [
             'id' => $id,
             'source' => 'MySQL',

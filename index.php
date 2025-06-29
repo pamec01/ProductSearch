@@ -32,22 +32,22 @@ $driver = $config['data_source'] === 'elastic'
 
 $controller = new ProductController($cache, $counter, $driver);
 
-// Router
+//router
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-// Zápasíme např. /produkt/abc123
+//např. /produkt/abc123
 if (preg_match('#^/produkt/([\w\-]+)$#', $requestUri, $matches)) {
     echo $controller->detailHtml($matches[1]);
     exit;
 }
 
-// JSON API: /api/product?id=abc123
+//JSON API: /api/product?id=abc123
 if ($requestUri === '/api/product' && isset($_GET['id'])) {
     header('Content-Type: application/json; charset=utf-8');
     echo $controller->detail($_GET['id']);
     exit;
 }
 
-// 404 fallback
+//404 fallback
 http_response_code(404);
 echo "<h1>404 – Stránka nenalezena</h1>";
