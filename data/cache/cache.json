@@ -1,0 +1,26 @@
+{
+    "abc125": {
+        "id": "abc125",
+        "source": "ElasticSearch",
+        "name": "Elastic produkt abc125",
+        "price": 397
+    },
+    "abc128": {
+        "id": "abc128",
+        "source": "ElasticSearch",
+        "name": "Elastic produkt abc128",
+        "price": 450
+    },
+    "abc129": {
+        "id": "abc129",
+        "source": "ElasticSearch",
+        "name": "Elastic produkt abc129",
+        "price": 176
+    },
+    "abc130": {
+        "id": "abc130",
+        "source": "ElasticSearch",
+        "name": "Elastic produkt abc130",
+        "price": 476
+    }
+}
